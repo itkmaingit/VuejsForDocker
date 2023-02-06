@@ -5,7 +5,6 @@
   "service": "nuxt_project",
   "remoteUser": "node",
   "workspaceFolder": "/home/node",
-  "postCreateCommand": "bash /home/node/move_modules/postCreateCommand.sh",
   "customizations": {
     "vscode": {
       "extensions": [
