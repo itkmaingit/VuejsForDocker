@@ -3,9 +3,12 @@ EXPOSE 3000
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
 
-RUN mkdir src
+# Ensure default `node` user has access to `sudo`
+ARG USERNAME=node
+RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
 
-RUN apk update && \
-    apk upgrade && \
-    apk add git && \
-    npx nuxi init application
+COPY nuxt.config.ts /home/node/move_modules/
+COPY vuetify.js /home/node/move_modules/
+COPY webfontloader.client.js /home/node/move_modules/
+COPY postCreateCommand.sh /home/node/move_modules/
