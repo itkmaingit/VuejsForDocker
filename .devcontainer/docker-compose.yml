@@ -8,17 +8,8 @@ services:
     working_dir: "/home/node"
     ports:
       - "8000:8000"
-
-    # ↓ 次回起動後にコメントアウトを解除
-    # volumes:
-    #   - ./src:/src:cached
-    # - exception_node_modules:/src/node_modules
-
     tty: true
     environment:
       - port=8000
       - DEVCONTAINER=true
       - CHOKIDAR_USEPOLLING=true
-# ↓ 次回起動後にコメントアウトを解除
-# volumes:
-#   exception_node_modules:
