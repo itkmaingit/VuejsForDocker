@@ -1,0 +1,25 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "Nuxt.js Project",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "nuxt_project",
+  "remoteUser": "node",
+  "workspaceFolder": "/home/node/application",
+  // "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "dariofuzinato.vue-peek",
+        "oderwat.indent-rainbow",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "esbenp.prettier-vscode",
+        "Vue.vscode-typescript-vue-plugin",
+        "dbaeumer.vscode-eslint",
+        "patbenatar.advanced-new-file",
+        "christian-kohler.path-intellisense",
+        "AntiAntiSepticeye.vscode-color-picker"
+      ]
+    }
+  }
+}
