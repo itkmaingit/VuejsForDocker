@@ -9,7 +9,7 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 
-COPY nuxt.config.ts /home/node/copy_modules/
-COPY vuetify.js /home/node/copy_modules/
-COPY webfontloader.client.js /home/node/copy_modules/
-COPY postCreateCommand.sh /home/node/copy_modules/
+COPY copy_modules/ /home/node/copy_modules/
+# COPY vuetify.js /home/node/copy_modules/
+# COPY webfontloader.client.js /home/node/copy_modules/
+# COPY postCreateCommand.sh /home/node/copy_modules/
