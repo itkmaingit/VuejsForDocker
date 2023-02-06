@@ -1,5 +1,5 @@
 FROM node:18
-EXPOSE 3000
+EXPOSE 8000
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
 
