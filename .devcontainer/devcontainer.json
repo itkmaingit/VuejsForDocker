@@ -4,8 +4,8 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "nuxt_project",
   "remoteUser": "node",
-  "workspaceFolder": "/home/node/application",
-  // "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "workspaceFolder": "/home/node",
+  "postCreateCommand": "bash copy_modules/postCreateCommand.sh",
   "customizations": {
     "vscode": {
       "extensions": [
